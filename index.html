@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV – NOMBRE COMPLETO</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ciruela:#4a1d3f; --ciruela2:#6b2d5c; --rosa:#d9728f; --palo:#fbe9ee;
+  --malva:#c9a2c8; --oro:#b8924a; --crema:#fff9fa; --texto:#3a2a36;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Nunito Sans','Segoe UI',Arial,sans-serif;color:var(--texto);background:linear-gradient(135deg,#f3d9e3,#e4d2ea);padding:32px 16px;line-height:1.55;font-size:14px}
+.cv{max-width:1000px;margin:auto;display:grid;grid-template-columns:300px 1fr;background:var(--crema);border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(74,29,63,.25)}
+
+/* Barra lateral */
+aside{background:linear-gradient(170deg,var(--ciruela),var(--ciruela2));color:#f6e8ef;padding:34px 26px}
+.foto{width:150px;height:150px;border-radius:50%;margin:0 auto 22px;border:4px solid var(--oro);background:var(--palo);display:flex;align-items:center;justify-content:center;text-align:center;font-size:12px;color:var(--ciruela2);overflow:hidden;box-shadow:0 0 0 8px rgba(255,255,255,.1)}
+.foto img{width:100%;height:100%;object-fit:cover}
+aside h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:600;color:#fff;margin:24px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--oro)}
+aside ul{list-style:none}
+.contacto li{margin-bottom:9px;font-size:13px;word-break:break-word;display:flex;gap:9px}
+.contacto .i{color:var(--oro);flex:none}
+.contacto a{color:inherit;text-decoration:none}
+.grupo{margin-bottom:12px}
+.grupo b{display:block;font-size:12.5px;color:var(--malva);margin-bottom:5px}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{background:rgba(255,255,255,.12);border:1px solid rgba(201,162,200,.4);padding:2px 9px;border-radius:20px;font-size:11.5px}
+.idioma{margin-bottom:12px;font-size:13px}
+.barra{height:6px;border-radius:6px;background:rgba(255,255,255,.18);margin-top:5px}
+.barra i{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,var(--oro),#e6c98a)}
+.cert li{position:relative;padding-left:16px;margin-bottom:7px;font-size:13px}
+.cert li::before{content:"✿";position:absolute;left:0;color:var(--oro);font-size:11px;top:1px}
+.cert small{color:var(--malva)}
+
+/* Columna principal */
+main{padding:0 40px 36px}
+header{margin:0 -40px 8px;padding:38px 40px 26px;background:linear-gradient(120deg,var(--palo),#f3dcec);border-bottom:3px solid var(--oro)}
+header h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:42px;line-height:1.05;color:var(--ciruela);font-weight:700}
+header p{margin-top:8px;font-size:14px;font-weight:700;color:var(--rosa)}
+section{margin-top:26px}
+h2.t{font-family:'Cormorant Garamond',Georgia,serif;font-size:27px;color:var(--ciruela);font-weight:700;display:flex;align-items:center;gap:12px;margin-bottom:12px}
+h2.t::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--rosa),transparent)}
+h2.t::before{content:"✿";color:var(--rosa);font-size:20px}
+.job{position:relative;padding-left:20px;margin-bottom:18px;border-left:2px solid var(--malva)}
+.job::before{content:"";position:absolute;left:-7px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--rosa);border:2px solid var(--crema)}
+.job h3{font-size:15.5px;color:var(--ciruela);font-weight:700}
+.job .meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:13px;margin:1px 0 6px}
+.job .meta span:first-child{color:var(--ciruela2);font-weight:600}
+.job .meta span:last-child{color:var(--oro);font-weight:700}
+.job ul{padding-left:16px}
+.job li{margin-bottom:3px;font-size:13.5px}
+.job li::marker{color:var(--rosa)}
+.card{background:var(--palo);border-left:4px solid var(--rosa);border-radius:0 10px 10px 0;padding:9px 14px;margin-bottom:9px;font-size:13.5px}
+.card b{color:var(--ciruela)}
+.edu{margin-bottom:10px}
+.edu b{color:var(--ciruela);display:block}
+.edu span{font-size:13px}
+
+@media(max-width:760px){
+  .cv{grid-template-columns:1fr}
+  main{padding:0 22px 28px}
+  header{margin:0 -22px 8px;padding:30px 22px 22px}
+  header h1{font-size:34px}
+}
+@media print{
+  @page{size:A4;margin:0}
+  body{background:#fff;padding:0;font-size:12.5px}
+  .cv{box-shadow:none;border-radius:0;max-width:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .job{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="cv">
+
+  <aside>
+    <!-- FOTO: borra el texto del círculo y pon: <img src="mi-foto.jpg" alt="Foto de perfil"> -->
+    <img class="foto" src="fotoperfil.jpg" alt="Foto de perfil">
+
+    <h2>Contacto</h2>
+    <ul class="contacto">
+      <li><span class="i">✆</span>+52 614 112 74 55</li>
+      <li><span class="i">✉</span><a href="mailto:elizabeth_torres_20@hotmail.com">elizabeth_torres_20@hotmail.com</a></li>
+      <li><span class="i">⌖</span>Chihuahua, Chih.</li>
+      <li><span class="i">in</span><a href="https://linkedin.com/in/elizabeth-torresbo/">linkedin.com/in/elizabeth-torresbo</a></li>
+    </ul>
+
+    <h2>Habilidades técnicas</h2>
+    <div class="grupo"><b>Lenguajes</b><div class="chips"><span class="chip">C#</span><span class="chip">PHP</span><span class="chip">Java</span><span class="chip">JavaScript</span><span class="chip">SQL</span><span class="chip">HTML5</span><span class="chip">CSS3</span></div></div>
+    <div class="grupo"><b>Frameworks y librerías</b><div class="chips"><span class="chip">.NET</span><span class="chip">ASP.NET MVC</span><span class="chip">Laravel</span><span class="chip">Entity Framework</span><span class="chip">PrimeFaces</span><span class="chip">jQuery</span><span class="chip">Text Control</span></div></div>
+    <div class="grupo"><b>Bases de datos</b><div class="chips"><span class="chip">Oracle</span><span class="chip">SQL Server</span><span class="chip">MySQL</span></div></div>
+    <div class="grupo"><b>Tecnologías web</b><div class="chips"><span class="chip">APIs REST</span><span class="chip">JSON</span><span class="chip">AJAX</span><span class="chip">Razor</span><span class="chip">Bootstrap</span><span class="chip">Tailwind CSS (básico)</span></div></div>
+    <div class="grupo"><b>Herramientas</b><div class="chips"><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Visual Studio</span><span class="chip">VS Code</span><span class="chip">Postman</span><span class="chip">TOAD</span><span class="chip">Navicat</span><span class="chip">Eclipse</span><span class="chip">NetBeans</span><span class="chip">Android Studio</span></div></div>
+    <div class="grupo"><b>Prácticas</b><div class="chips"><span class="chip">Scrum</span><span class="chip">Análisis de requerimientos</span><span class="chip">Pruebas unitarias y de integración</span><span class="chip">Optimización de código</span><span class="chip">Diseño de algoritmos</span></div></div>
+
+    <h2>Idiomas</h2>
+    <div class="idioma">Español · Nativo<div class="barra"><i style="width:100%"></i></div></div>
+    <div class="idioma">Inglés · Intermedio (B1)<div class="barra"><i style="width:50%"></i></div></div>
+
+    <h2>Certificaciones y cursos</h2>
+    <ul class="cert">
+      <li>IA para la Productividad Profesional <small>(2026)</small></li>
+      <li>Amenazas Comunes <small>(2024)</small></li>
+      <li>Seguridad de la Información <small>(2022)</small></li>
+      <li>ISO 9001:2015 <small>(2020)</small></li>
+      <li>Certificación Carnegie <small>(2016)</small></li>
+    </ul>
+  </aside>
+
+  <main>
+    <header>
+      <h1>ELIZABETH TORRES BORUNDA</h1>
+      <p>Ingeniera en Tecnologías de la Información y Comunicación</p>
+    </header>
+
+    <section>
+      <h2 class="t">Perfil profesional</h2>
+      <p>Ingeniera en Tecnologías de la Información y Comunicación con más de 7 años de experiencia en desarrollo de aplicaciones web y sistemas empresariales. Experiencia con C#, .NET, ASP.NET MVC, Laravel, PHP y bases de datos Oracle y MySQL, con enfoque en desarrollo backend, diseño y optimización de bases de datos e integración de servicios y APIs REST. He colaborado en proyectos del sector público y privado, participando en análisis de requerimientos, implementación de funcionalidades clave y mantenimiento de sistemas. Me caracterizo por el pensamiento analítico, el aprendizaje continuo y el trabajo colaborativo.</p>
+    </section>
+
+    <section>
+      <h2 class="t">Experiencia profesional</h2>
+
+      <div class="job">
+        <h3>Analista Programador</h3>
+        <div class="meta"><span>Fiscalía General del Estado</span><span>Marzo 2025 – Actualidad</span></div>
+        <ul>
+          <li>Desarrollo e implementación de aplicaciones web con C#, .NET y ASP.NET MVC, en backend y frontend.</li>
+          <li>Desarrollo de módulos, funcionalidades e interfaces dinámicas con Razor, JavaScript, jQuery, HTML5 y CSS.</li>
+          <li>Diseño, desarrollo y optimización de consultas, procedimientos y objetos de base de datos Oracle.</li>
+          <li>Participación en proyectos institucionales de alto impacto: Carpetas de Investigación, Dashboard del Departamento y Control de Armas.</li>
+          <li>Integración de funcionalidades entre módulos, pruebas funcionales y validación de procesos operacionales.</li>
+          <li>Publicación y despliegue de aplicaciones en servidores, además de mantenimiento evolutivo de sistemas existentes.</li>
+          <li>Análisis de requerimientos y seguimiento del desarrollo mediante control de versiones con GitHub.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Desarrolladora Backend</h3>
+        <div class="meta"><span>Equity Link</span><span>Septiembre 2022 – Septiembre 2024</span></div>
+        <ul>
+          <li>Desarrollo y mantenimiento de módulos empresariales con Laravel 9, PHP y MySQL.</li>
+          <li>Implementación de lógica de negocio para procesos financieros: factoraje, cobranza, cálculo de intereses y análisis financiero.</li>
+          <li>Desarrollo de fórmulas y cálculos financieros para automatizar procesos y operaciones críticas.</li>
+          <li>Desarrollo de módulos administrativos y catálogos para contactos, direcciones, empresas, cuentas bancarias y proveedores.</li>
+          <li>Consumo de APIs y servicios externos; desarrollo frontend con JavaScript, jQuery, HTML5 y CSS3.</li>
+          <li>Diseño y gestión de bases de datos, consultas SQL complejas e implementación de reglas de negocio.</li>
+          <li>Gestión de incidencias y tareas con Jira bajo Scrum, y control de versiones con GitHub.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Desarrolladora de Software</h3>
+        <div class="meta"><span>Compecer</span><span>Mayo 2019 – Septiembre 2022</span></div>
+        <ul>
+          <li>Análisis, diseño y desarrollo desde cero de sistemas web empresariales con Laravel, PHP y MySQL.</li>
+          <li>Levantamiento de requerimientos y análisis de procesos para convertir necesidades operativas en soluciones de software.</li>
+          <li>Diseño y creación de bases de datos, estructuras de información y lógica de negocio.</li>
+          <li>Desarrollo integral de tres sistemas: Certificación de Personas, Gestión de Consultorías y Certificación de Empresas bajo normas ISO.</li>
+          <li>Implementación de flujos de trabajo, evaluaciones, exámenes, usuarios y perfiles, reportes y expedición de certificados.</li>
+          <li>Adaptación de procesos y reglas de negocio a los requisitos específicos de cada servicio y norma de certificación.</li>
+          <li>Pruebas, despliegue y publicación en producción; soporte a usuarios, mantenimiento evolutivo y resolución de incidencias.</li>
+          <li>Coordinación de equipo: asignación de tareas, seguimiento de avances, revisión de entregables y supervisión del desarrollo.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Desarrolladora Web · Estancia profesional</h3>
+        <div class="meta"><span>Universidad Tecnológica de Chihuahua</span><span>Abril 2018 – Agosto 2018</span></div>
+        <ul><li>Desarrollo y mantenimiento de aplicaciones web institucionales con Laravel; mejora de funcionalidades y control de versiones con GitHub.</li></ul>
+      </div>
+
+      <div class="job">
+        <h3>Desarrolladora Web · Prácticas profesionales</h3>
+        <div class="meta"><span>Blueweb Software Solutions</span><span>Septiembre 2016 – Diciembre 2016</span></div>
+        <ul><li>Desarrollo de aplicaciones web con Java y PrimeFaces; administración y consulta de bases de datos SQL Server, pruebas de integración y control de versiones con Subversion.</li></ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="t">Proyectos relevantes</h2>
+      <div class="card"><b>Sistema de Certificación de Personas:</b> plataforma web en Laravel y MySQL para automatizar la evaluación de competencias, exámenes, catálogos y emisión de certificados.</div>
+      <div class="card"><b>Gestión de Consultorías:</b> sistema integral para la administración, control y seguimiento de servicios de consultoría empresarial.</div>
+      <div class="card"><b>Certificación de Empresas:</b> plataforma para gestionar procesos de certificación diferenciados bajo diversas normas ISO.</div>
+    </section>
+
+    <section>
+      <h2 class="t">Educación</h2>
+      <div class="edu"><b>Ingeniería en Tecnologías de la Información y Comunicación</b><span>Universidad Tecnológica de Chihuahua · 2014–2018</span></div>
+      <div class="edu"><b>Bachillerato General</b><span>Colegio de Bachilleres del Estado de Chihuahua · 2010–2013</span></div>
+    </section>
+  </main>
+
+</div>
+</body>
+</html>
